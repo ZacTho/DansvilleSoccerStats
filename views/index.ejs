@@ -1,0 +1,79 @@
+<% include header.ejs %>
+<body>
+<div class="container h-100" style="background-color: gray;">
+<div class="row">
+		<div class="col-sm-12 col-lg-7 offset-lg-3 align-self-center">
+		<div class="card bg-primary" style="margin-top: 25px;">
+		  <div class="card-body">
+		    <h2 class="card-title">Team Totals</h2>
+		    <p class="card-text">
+		    	<table >
+					<tr>
+						<th><h3> Goals: </h3> </th>
+						<td> <h3>
+							<% results.forEach(function(r) { %>
+					        <%= r.goals %>
+					    	<% }); %> </h3>
+						</td>
+					</tr>
+					<tr>
+						<th><h3> Assists: </h3> </th>
+						<td> <h3> <% results.forEach(function(r) { %>
+					        <%= r.assists %>
+					    	<% }); %> </h3>		
+				    	</td>
+					</tr>
+					<tr>
+						<th><h3> Saves: </h3> </th>
+						<td> <h3>
+							<% results.forEach(function(r) { %>
+					        <%= r.saves %>
+					    	<% }); %> </h3>
+						</td>
+					</tr>
+				</table>
+		    </p>
+		    <table>
+	    	<tr>
+	    		<td>
+				    <form action="/addplayerform" method="get" >
+				    	<input type="submit" class="text-dark" style="background-color: #FDFDFE; height: 30px;" value="Add Player" />
+					</form>
+				</td>
+				<td>
+					<form action="/selectplayer" method="get" >
+				    	<input type="submit" class="text-dark" style="background-color: #FDFDFE; height: 30px; margin-left: 10px;" value="View Player Stats" />
+					</form>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<form action="/signup" method="get" >
+				    	<input type="submit" class="text-dark" style="background-color: #FDFDFE; height: 30px;" value="Add Admin" />
+					</form>
+				</td>
+			
+				<td>
+					<form action="/addstatsform" method="get" >
+				    	<input type="submit" class="text-dark" style="background-color: #FDFDFE; height: 30px; margin-left: 10px;" value="Add Statistics" />
+					</form>
+				</td>
+			</tr>
+				<td>
+					<form action="/editplayerselect" method="get" >
+				    	<input type="submit" class="text-dark" style="background-color: #FDFDFE; height: 30px;" value="Edit Player Info" />
+					</form>
+				</td>
+				<td>
+					<form action="/removeplayerform" method="get" >
+				    	<input type="submit" class="text-dark" style="background-color: #FDFDFE; height: 30px; margin-left: 10px;" value="Remove Player" />
+					</form>
+				</td>
+			</tr>
+		  </div>
+		</div>
+	</div>
+</div>
+</div>
+</body>
+</html>

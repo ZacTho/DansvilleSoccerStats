@@ -1,0 +1,74 @@
+<% include header.ejs %>
+<body>
+<div class="container h-100" style="background-color: gray;">
+<div class="row">
+	<div class="col-sm-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3 align-self-center">
+		<div class="card bg-primary" style="margin-top: 25px;">
+		  	<div class="card-body">
+		    <h2 class="card-title"> Edit Player <% results.forEach(function(r) { %>
+								        <%= r.fname %> <%= r.lname %>
+								    	<% }); %> </h2>
+		    	<p class="card-text">
+		    		<form action="editplayer" method="post">
+							<div>
+								 <% results.forEach(function(r) { %>  	
+								<input type="hidden" name="player" value="<%= r.playerid %>" />
+							</div>
+							<% }); %>
+							<div>
+								  <% results.forEach(function(r) { %>  	
+								<h4>First Name: </h4>
+								<input type="text" name="fname" value="<%= r.fname %>" required/>
+								<% }); %>
+							</div>
+							<div>
+								<% results.forEach(function(r) { %> 
+								<h4>Last Name: </h4>
+								<input type="text" name="lname" value="<%= r.lname %>" required/>
+							</div>
+							<% }); %>
+							<div>
+								<% results.forEach(function(r) { %> 
+								<h4>Date of Birth: </h4>
+								<input type="text" name="dob" value="<%= r.dob %>" required/>
+							</div>
+							<% }); %>
+							<div>
+								<% results.forEach(function(r) { %> 
+								<h4>Position: </h4>
+								<input type="text" name="pos" value="<%= r.position %>" required/>						        
+							</div>
+							<% }); %>
+							<div>
+								<% results.forEach(function(r) { %> 
+								<h4>Goals: </h4>
+								<input type="number" name="goals" min="0" max="200" value="<%= r.goals %>" />
+							</div>
+							<% }); %>
+							<div>
+								<% results.forEach(function(r) { %> 
+								<h4>Assists: </h4>
+								<input type="number" name="assists" min="0" max="200" value="<%= r.assists %>" />
+							</div>
+							<% }); %>
+							<div>
+								<% results.forEach(function(r) { %> 
+								<h4>Saves: </h4>
+								<input type="number" name="saves" min="0" max="200" value="<%= r.saves %>" />
+							</div>
+							<% }); %>
+							<br />
+							<div>
+								<input type="submit" value="Submit Changes" /></td>
+							</div>
+						<br />
+					</form>
+					<a href="/" class="text-light"> <h5> Return to Home</h5></a>
+				</p>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+</body>
+</html>

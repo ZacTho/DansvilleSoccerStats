@@ -1,0 +1,55 @@
+<% include header.ejs %>
+<body>
+<div class="container h-100" style="background-color: gray;">
+<div class="row">
+	<div class="col-sm-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3 align-self-center">
+		<div class="card bg-primary" style="margin-top: 25px;">
+		  	<div class="card-body">
+		    <h2 class="card-title">Add Player</h2>
+		    	<p class="card-text">
+		    		<form action="addplayer" method="post">
+
+							<div>
+								<h4>First Name: </h4>
+								<input type="text" name="fname" required/>
+							</div>
+							<div>
+								<h4>Last Name: </h4></th>
+								<input type="text" name="lname" required/>
+							</div>
+							<div>
+								<h4>Date of Birth: </h4>
+								<input type="date" name="dob" required />
+							</div>
+							<div>
+								<h4>Position: </h4>
+								<input type="text" name="pos" required/>
+							</div>
+							<div>
+								<h4>Goals: </h4>
+								<input type="number" name="goals" min="0" max="200" value="0" />
+							</div>
+							<div>
+								<h4>Assists: </h4>
+								<input type="number" name="assists" min="0" max="200" value="0" />
+							</div>
+							<div>
+								<h4>Saves: </h4>
+								<input type="number" name="saves" min="0" max="200" value="0" />
+							</div>
+								<br />
+							<div>
+								<input type="submit" value="Add Player" />
+							</div>
+							<br />
+					</form>
+
+					<a href="/" class="text-light"> <h5> Return to Home</h5></a>
+				</p>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+</body>
+</html>

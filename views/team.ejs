@@ -1,0 +1,53 @@
+<% include header2.ejs %>
+<body>
+<div class="container h-100" style="background-color: gray;">
+<div class="row">
+	<div class="col-sm-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3 align-self-center">
+		<div class="card bg-primary" style="margin-top: 25px;">
+		  <div class="card-body">
+		    <h2 class="card-title">Team Totals</h2>
+		    <p class="card-text">
+		    	<table >
+					<tr>
+						<th><h3> Goals: </h3> </th>
+						<td> <h3>
+							<% results.forEach(function(r) { %>
+					        <%= r.goals %>
+					    	<% }); %> </h3>
+						</td>
+					</tr>
+					<tr>
+						<th><h3> Assists: </h3> </th>
+						<td> <h3> <% results.forEach(function(r) { %>
+					        <%= r.assists %>
+					    	<% }); %> </h3>		
+				    	</td>
+					</tr>
+					<tr>
+						<th><h3> Saves: </h3> </th>
+						<td> <h3>
+							<% results.forEach(function(r) { %>
+					        <%= r.saves %>
+					    	<% }); %> </h3>
+						</td>
+					</tr>
+				</table>
+		    </p>
+		    <table>
+	    	<tr>
+				<td>
+					<form action="/selectplayer" method="get" >
+				    	<input type="submit" class="text-dark" style="background-color: #FDFDFE; height: 30px; margin-left: -10px;" value="View Player Stats" />
+					</form>
+				</td>
+			</tr>
+		  </div>
+		  </div>
+		  </div>
+
+
+</div>
+</div>
+
+</body>
+</html>
