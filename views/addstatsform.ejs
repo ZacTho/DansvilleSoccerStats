@@ -7,43 +7,35 @@
 		  	<div class="card-body">
 		    <h2 class="card-title">Add Statistics</h2>
 		    	<p class="card-text">
-		    		<table>
-						<tr>
-						<th>Player Name</th>
-						<td>
+
+						<div class="input-group">
 						<form method="post" action="addstats" >
-							<select name="player">
+						<label>Player Name</label>
+							<select class="custom-select" name="player">
 								<% results.forEach(function(r) { %>
 									<option value="<%= r.playerid %>">
 							        	<%= r.fname %> <%= r.lname %>
 							    	</option>
 						    	<% }); %>
 							</select>
-						</td>
-						</tr>
-						<tr>
-							<div class="input-group">
-							<th><h4>Goals: </h4></th><br />
-							<td><input type="number" class="form-control" name="goals" min="0" max="200" value="0" /></td>
-							</div>
-						</tr>
-						<tr>
-							<div class="input-group">
-							<th><h4>Assists: </h4></th><br />
-							<td><input type="number" class="form-control" name="assists" min="0" max="200" value="0" /></td>
-							</div>
-						</tr>
-						<tr>
-							<div class="input-group">
-							<th><h4>Saves: </h4></th><br />
-							<td><input type="number" class="form-control" name="saves" min="0" max="200" value="0" /></td>
-							</div>
-						</tr>
-						<tr>
-							<td><input type="submit"  class="form-control" class="btn btn-light text-dark" value="Add Statistics" /></td>
-						</tr>
-						</table>
-					</form>
+
+						<div class="input-group">
+							<h4>Goals: </h4>
+							<input type="number" class="form-control" name="goals" min="0" max="200" value="0" />
+						</div>
+
+						<div class="input-group">
+							<h4>Assists: </h4>
+							<input type="number" class="form-control" name="assists" min="0" max="200" value="0" />
+						</div>
+
+						<div class="input-group">
+							<h4>Saves: </h4>
+							<input type="number" class="form-control" name="saves" min="0" max="200" value="0" />
+						</div>
+						<br />
+							<input type="submit"  class="form-control" class="btn btn-light text-dark" value="Add Statistics" />
+						</form>
 					<br />
 					<a href="/" class="text-light"> <h5> Return to Home</h5></a>
 				</p>
