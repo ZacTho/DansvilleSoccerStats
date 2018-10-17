@@ -8,14 +8,16 @@
 		  <div class="card-body">
 		    <h2 class="card-title">Choose a player to view their information </h2>
 			    <p class="card-text">
-					<form method="post" action="viewplayer" >
-						<select name="player">
+					<form method="post" action="viewplayer">
+					<div class="form-input">
+						<select class="custom-select" name="player">
 							<% results.forEach(function(r) { %>
 								<option value="<%= r.playerid %>">
 						        	<%= r.fname %> <%= r.lname %>
 						    	</option>
 					    	<% }); %>
 						</select>
+					</div>
 						<input type="submit" class="btn btn-light text-dark" value="Submit" />
 					</form>
 					<a href="/" class="text-light"><h4>Return to Home</h4></a>
