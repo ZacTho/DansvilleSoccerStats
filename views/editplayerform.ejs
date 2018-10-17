@@ -13,50 +13,50 @@
 							<div>
 								 <% results.forEach(function(r) { %>  	
 								<input type="hidden" name="player" value="<%= r.playerid %>" />
-							</div>
 							<% }); %>
+							</div>
 							<div class="input-group">
 								  <% results.forEach(function(r) { %>  	
-								<h4>First Name: </h4><br />
+								<label>First Name: </label><br />
 								<input type="text" class="form-control" name="fname" value="<%= r.fname %>" required/>
 								<% }); %>
 							</div>
 							<div class="input-group">
 								<% results.forEach(function(r) { %> 
-								<h4>Last Name: </h4><br />
+								<label>Last Name: </label><br />
 								<input type="text" class="form-control" name="lname" value="<%= r.lname %>" required/>
-							</div>
 							<% }); %>
+							</div>
 							<div class="input-group">
 								<% results.forEach(function(r) { %> 
-								<label>Date of Birth: </label
+								<label>Date of Birth: </label><br />
 								<input type="text" class="form-control" name="dob" value="<%= r.dob %>" required/>
-							</div>
 							<% }); %>
+							</div>
 							<div class="input-group">
 								<% results.forEach(function(r) { %> 
-								<label>Position: </label>
+								<label>Position: </label><br />
 								<input type="text" class="form-control" name="pos" value="<%= r.position %>" required/>						        
-							</div>
 							<% }); %>
+							</div>
 							<div class="input-group">
 								<% results.forEach(function(r) { %> 
-								<h4>Goals: </label>
+								<label>Goals: </label><br />
 								<input type="number" class="form-control" name="goals" min="0" max="200" value="<%= r.goals %>" />
-							</div>
 							<% }); %>
+							</div>
 							<div class="input-group">
 								<% results.forEach(function(r) { %> 
-								<label>Assists: </label>
+								<label>Assists: </label><br />
 								<input type="number" class="form-control" name="assists" min="0" max="200" value="<%= r.assists %>" />
-							</div>
 							<% }); %>
+							</div>
 							<div class="input-group">
 								<% results.forEach(function(r) { %> 
-								<label>Saves: </label>
+								<label>Saves: </label><br />
 								<input type="number" class="form-control" name="saves" min="0" max="200" value="<%= r.saves %>" />
-							</div>
 							<% }); %>
+							</div>
 							<br />
 							<div>
 								<input type="submit" class="btn btn-light text-dark" value="Submit Changes" /></td>
