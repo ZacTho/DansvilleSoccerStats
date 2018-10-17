@@ -29,31 +29,31 @@
 							<% }); %>
 							<div class="input-group">
 								<% results.forEach(function(r) { %> 
-								<h4>Date of Birth: </h4><br />
+								<label>Date of Birth: </label
 								<input type="text" class="form-control" name="dob" value="<%= r.dob %>" required/>
 							</div>
 							<% }); %>
 							<div class="input-group">
 								<% results.forEach(function(r) { %> 
-								<h4>Position: </h4><br />
+								<label>Position: </label>
 								<input type="text" class="form-control" name="pos" value="<%= r.position %>" required/>						        
 							</div>
 							<% }); %>
 							<div class="input-group">
 								<% results.forEach(function(r) { %> 
-								<h4>Goals: </h4><br />
+								<h4>Goals: </label>
 								<input type="number" class="form-control" name="goals" min="0" max="200" value="<%= r.goals %>" />
 							</div>
 							<% }); %>
 							<div class="input-group">
 								<% results.forEach(function(r) { %> 
-								<h4>Assists: </h4><br />
+								<label>Assists: </label>
 								<input type="number" class="form-control" name="assists" min="0" max="200" value="<%= r.assists %>" />
 							</div>
 							<% }); %>
 							<div class="input-group">
 								<% results.forEach(function(r) { %> 
-								<h4>Saves: </h4><br />
+								<label>Saves: </label>
 								<input type="number" class="form-control" name="saves" min="0" max="200" value="<%= r.saves %>" />
 							</div>
 							<% }); %>
