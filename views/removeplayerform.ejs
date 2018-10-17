@@ -8,13 +8,15 @@
 		    <h2 class="card-title">Choose a player to remove From team</h2>
 			    <p class="card-text">
 					<form method="post" action="removeplayer" >
-						<select name="player">
+						<div class="input-group">
+						<select class="custom-select" name="player">
 							<% results.forEach(function(r) { %>
 								<option value="<%= r.playerid %>">
 						        	<%= r.fname %> <%= r.lname %>
 						    	</option>
 					    	<% }); %>
 						</select>
+						</div>
 						<input type="submit" class="btn btn-light text-dark" value="Submit" />
 					</form>
 					<a href="/" class="text-light"><h4>Return to Home</h4></a>
